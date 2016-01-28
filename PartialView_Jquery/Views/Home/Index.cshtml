@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")" type="text/javascript"></script>
+
+<h2>Index</h2>
+<h1>Primera Vista Parcial - Clientes</h1>
+
+<input type="button" id="btn1" value="VistaParcialCliente"/>
+<div id="dvDetalleCliente" styles="width:50%;heigth:130px;display:none"></div>
+
+<h1> Segunda Vista Parcial - productos</h1>
+<input type="button" id="btn2" value="VistaParcialProducto"/>
+<div id="dvDetalleProducto"></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#btn1').click(function() {
+            $('#dvDetalleCliente').load('/Home/ObtenerCliente');
+        });
+    });
+
+    $(document).ready(function () {
+        $('#btn2').click(function () {
+            $('#dvDetalleProducto').load('/Home/ObtenerProducto');
+        });
+    });
+</script>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PartialView_Jquery.Models.Cliente>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalle Cliente</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th> Nombre </th>
+            <th> Apellido </th>
+            <th> MostrarNombre </th>
+            <th> Edad </th>
+            <th> Profesion </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.Nombre </td>
+                <td> @item.Apellido </td>
+                <td> @item.MostrarNombre </td>
+                <td> @item.Edad </td>
+                <td> @item.Profesion </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
